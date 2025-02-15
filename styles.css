@@ -1,0 +1,67 @@
+/* Background Image */
+body {
+    background-image: url("https://source.unsplash.com/1600x900/?finance,technology,ai");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #0a0a0a; /* Fallback in case the image fails to load */
+}
+
+/* Sidebar Customization */
+section[data-testid="stSidebar"] {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent sidebar */
+    color: white;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: #00FFEA;
+    text-shadow: 2px 2px 10px rgba(0, 255, 234, 0.8);
+}
+
+/* Remove Broken Image Placeholder */
+img[alt="0"], img[src="0"] {
+    display: none !important;
+}
+
+/* 3D Button */
+.stButton>button {
+    background-color: #00ffea;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.stButton>button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 255, 234, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffea;
+    border-radius: 10px;
+}
+
+/* Animate Titles */
+@keyframes flicker {
+    0% {opacity: 0.9;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+h1, h2, h3 {
+    animation: flicker 2s infinite;
+}
